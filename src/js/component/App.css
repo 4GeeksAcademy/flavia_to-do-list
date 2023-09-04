@@ -1,0 +1,125 @@
+.bigContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  background-color: rgb(150, 182, 197);
+}
+.littleContainer {
+  width: 45vw;
+  height: 125vh;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  padding-bottom: 2%;
+  background-color: rgb(173, 196, 206);
+}
+.inputs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
+}
+.grateful {
+  height: 20vh;
+}
+.priorities {
+  height: 20vh;
+}
+.toDo {
+  height: 30vh;
+}
+.notes {
+  height: 15vh;
+}
+#dropdownButton {
+  background-color: rgb(238, 224, 201);
+  margin-left: 5%;
+  font-family: "Raleway", sans-serif;
+}
+#textareaContent {
+  margin-left: 12%;
+}
+#submitButton {
+  background-color: rgb(238, 224, 201);
+  font-family: "Raleway", sans-serif;
+}
+#submitButton:hover {
+  background-color: rgb(241, 240, 232);
+}
+.grateful {
+  display: block;
+  margin-left: 10%;
+  margin-right: 10%;
+  height: 20%;
+  margin-top: 3%;
+}
+.gratefulTitle {
+  font-family: "Raleway", sans-serif;
+  font-size: 1vw;
+  color: #333333c0;
+  height: 10%;
+  margin-bottom: 10px;
+}
+.gratefulContent {
+  width: 100%;
+  height: 90%;
+  background-color: rgb(241, 240, 232);
+}
+.priorities {
+  display: block;
+  margin-left: 10%;
+  margin-right: 10%;
+  height: 20%;
+  margin-top: 2%;
+}
+.prioritiesTitle {
+  font-family: "Raleway", sans-serif;
+  font-size: 1vw;
+  color: #333333c0;
+  height: 10%;
+  margin-bottom: 10px;
+}
+.prioritiesContent {
+  width: 100%;
+  height: 90%;
+  background-color: rgb(241, 240, 232);
+}
+.toDo {
+  display: block;
+  margin-left: 10%;
+  margin-right: 10%;
+  height: 20%;
+  margin-top: 2%;
+}
+.toDoTitle {
+  font-family: "Raleway", sans-serif;
+  font-size: 1vw;
+  color: #333333c0;
+  height: 10%;
+  margin-bottom: 10px;
+}
+.toDoContent {
+  width: 100%;
+  height: 90%;
+  background-color: rgb(241, 240, 232);
+}
+.notes {
+  display: block;
+  margin-left: 10%;
+  margin-right: 10%;
+  height: 20%;
+  margin-top: 2%;
+}
+.notesTitle {
+  font-family: "Raleway", sans-serif;
+  font-size: 1vw;
+  color: #333333c0;
+  height: 10%;
+  margin-bottom: 10px;
+}
+.notesContent {
+  width: 100%;
+  height: 90%;
+  background-color: rgb(241, 240, 232);
+  margin-bottom: 10px;
+}
