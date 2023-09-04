@@ -7,7 +7,7 @@
 }
 .littleContainer {
   width: 60vw;
-  height: 120vh;
+  height: 135vh;
   margin-top: 5%;
   margin-bottom: 5%;
   padding-bottom: 2%;
@@ -16,27 +16,8 @@
 .inputsContainer {
   display: flex;
   justify-content: center;
-  margin-top: 5%;
-}
-
-#dropdownButton {
-  background-color: rgb(238, 224, 201);
-  font-family: "Raleway", sans-serif;
-  margin: none;
-}
-#textareaContent {
-  border: #333333c0;
-  border-radius: 10px;
-}
-.submitContainer {
-  margin-top: 5%;
-}
-.submitButton {
-  background-color: rgb(238, 224, 201);
-  font-family: "Raleway", sans-serif;
-}
-.submitButton:hover {
-  background-color: rgb(241, 240, 232);
+  align-items: center;
+  margin-top: 3%;
 }
 .listsContainer {
   height: 80vh;
@@ -48,9 +29,40 @@
 .gratefulAndPriorities {
   display: flex;
   height: 20%;
-  margin-top: 8%;
+  margin-top: 5%;
   margin-bottom: 5%;
 }
+label {
+  font-family: "Raleway", sans-serif;
+  font-size: 1vw;
+}
+#opciones {
+  background-color: rgb(238, 224, 201);
+  font-family: "Raleway", sans-serif;
+  font-size: 1vw;
+  border: 1px solid rgb(150, 182, 197);
+  padding: 1%;
+  border-radius: 10px;
+  margin-left: 2%;
+}
+textarea {
+  font-family: "Raleway", sans-serif;
+  font-size: 1vw;
+}
+#textareaContent {
+  border: #333333c0;
+  border-radius: 10px;
+}
+
+.submitButton {
+  background-color: rgb(238, 224, 201);
+  font-family: "Raleway", sans-serif;
+  font-size: 1vw;
+}
+.submitButton:hover {
+  background-color: rgb(241, 240, 232);
+}
+
 .grateful {
   display: block;
   margin-left: 10%;
@@ -124,7 +136,7 @@
   font-size: 1vw;
   color: #333333c0;
   height: 10%;
-  margin-bottom: 2%;
+  margin-bottom: 20px;
 }
 .notesContent {
   width: 100%;

@@ -11,44 +11,20 @@ export default function App() {
         <div className="inputsContainer">
           <div className="inputs">
             {/* Comienzo de dropdown */}
-            <div class="btn-group dropend h-25 mt-3 ms-4">
-              <button
-                id="dropdownButton"
-                type="button"
-                class="btn dropdown-toggle"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Elige tu sección
-              </button>
-              <ul class="dropdown-menu">
-                <li>
-                  <a class="dropdown-item" href="#">
-                    Grateful for
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">
-                    Today's priorities
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">
-                    To Do List
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">
-                    Notes
-                  </a>
-                </li>
-              </ul>
+            <div class="mt-3 ms-4">
+              <label for="opciones">Selecciona una opción:</label>
+              <select id="opciones" name="opciones">
+                <option value="opcion1">Grateful for</option>
+                <option value="opcion2">Priorities</option>
+                <option value="opcion3">To do list</option>
+                <option value="opcion3">Notes</option>
+              </select>
             </div>
             {/*Fin de dropdown */}
             <div>
               <textarea
-                rows="3"
-                cols="70"
+                rows="2"
+                cols="60"
                 id="textareaContent"
                 className="mt-3"
               ></textarea>
