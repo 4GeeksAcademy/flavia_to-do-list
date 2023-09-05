@@ -45,6 +45,8 @@
 .text:hover .deleteButton {
   visibility: visible;
   border: none;
+  background-color: transparent;
+  color: rgb(205, 24, 24);
 }
 
 .priorities {
@@ -123,4 +125,38 @@
   font-size: 0.85vw;
   padding-top: 1%;
   word-wrap: break-word;
+}
+
+/* Anchura del scrollbar */
+.gratefulContent::-webkit-scrollbar,
+.prioritiesContent::-webkit-scrollbar,
+.toDoContent::-webkit-scrollbar,
+.notesContent::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track del scrollbar (el fondo) */
+.gratefulContent::-webkit-scrollbar-track,
+.prioritiesContent::-webkit-scrollbar-track,
+.toDoContent::-webkit-scrollbar-track,
+.notesContent::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1); /* Cambia el color de fondo aquí */
+  border-radius: 10px;
+}
+
+/* El thumb del scrollbar (el botón que se mueve) */
+.gratefulContent::-webkit-scrollbar-thumb,
+.prioritiesContent::-webkit-scrollbar-thumb,
+.toDoContent::-webkit-scrollbar-thumb,
+.notesContent::-webkit-scrollbar-thumb {
+  background: rgba(17, 108, 110, 0.721); /* Cambia el color del thumb aquí */
+  border-radius: 10px;
+}
+
+/* Cambia el color del thumb cuando se pasa el mouse sobre él */
+.gratefulContent::-webkit-scrollbar-thumb:hover,
+.prioritiesContent::-webkit-scrollbar-thumb:hover,
+.toDoContent::-webkit-scrollbar-thumb:hover,
+.notesContent::-webkit-scrollbar-thumb:hover {
+  background: rgba(17, 108, 110, 0.9); /* Cambia el color cuando se pasa el mouse aquí */
 }

@@ -48,3 +48,33 @@ textarea {
 .submitButton:hover {
   background-color: rgba(160, 30, 30, 0.74);
 }
+
+/* Anchura del scrollbar */
+.taskContent::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track del scrollbar (el fondo) */
+.taskContent::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1); /* Cambia el color de fondo aquí */
+  border-radius: 10px;
+}
+
+/* El thumb del scrollbar (el botón que se mueve) */
+.taskContent::-webkit-scrollbar-thumb {
+  background: rgba(17, 108, 110, 0.721); /* Cambia el color del thumb aquí */
+  border-radius: 10px;
+}
+
+/* Cambia el color del thumb cuando se pasa el mouse sobre él */
+.taskContent::-webkit-scrollbar-thumb:hover {
+  background: rgba(
+    17,
+    108,
+    110,
+    0.9
+  ); /* Cambia el color cuando se pasa el mouse aquí */
+}
+.taskContent::-webkit-scrollbar-corner {
+  display: none;
+}

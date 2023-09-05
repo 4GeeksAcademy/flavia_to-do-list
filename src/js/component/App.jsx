@@ -34,7 +34,7 @@ export default function App() {
       hideProgressBar: true,
       theme: "colored",
       style: {
-        backgroundColor: "rgb(150, 194, 145)",
+        backgroundColor: "rgb(67, 83, 52)",
       },
     });
   };
@@ -46,7 +46,7 @@ export default function App() {
       hideProgressBar: true,
       theme: "colored",
       style: {
-        backgroundColor: "rgb(251, 216, 93)",
+        backgroundColor: "rgb(232, 170, 66)",
       },
     });
   };
