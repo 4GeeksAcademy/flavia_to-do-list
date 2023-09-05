@@ -9,10 +9,10 @@ label {
   font-size: 1vw;
 }
 #opciones {
-  background-color: rgb(238, 224, 201);
+  background-color: rgb(223, 211, 195);
   font-family: "Raleway", sans-serif;
   font-size: 1vw;
-  border: 1px solid rgb(150, 182, 197);
+  border: none;
   padding: 1%;
   border-radius: 10px;
   margin-left: 2%;
@@ -25,15 +25,20 @@ label {
   font-family: "Raleway", sans-serif;
   font-size: 1vw;
 }
-
+textarea:disabled {
+  background-color: rgb(205, 194, 174);
+}
+textarea {
+  background-color: rgb(223, 211, 195);
+}
 .submitContainer {
   margin-top: 3%;
 }
 .submitButton {
-  background-color: rgb(238, 224, 201);
+  background-color: rgb(204, 156, 117);
   font-family: "Raleway", sans-serif;
   font-size: 1vw;
 }
 .submitButton:hover {
-  background-color: rgb(241, 240, 232);
+  background-color: rgb(162, 91, 91);
 }

@@ -3,7 +3,7 @@
   margin-top: 10%;
   margin-left: 5%;
   margin-right: 5%;
-  border: 1px solid rgb(150, 182, 197);
+  border: 2px solid rgb(125, 110, 131);
 }
 .gratefulAndPriorities {
   display: flex;
@@ -29,7 +29,7 @@
 .gratefulContent {
   width: 100%;
   height: 90%;
-  background-color: rgb(241, 240, 232);
+  background-color: rgb(223, 211, 195);
   border-radius: 10px;
   overflow-y: auto;
   font-family: "Raleway", sans-serif;
@@ -64,7 +64,7 @@
 .prioritiesContent {
   width: 100%;
   height: 90%;
-  background-color: rgb(241, 240, 232);
+  background-color: rgb(223, 211, 195);
   border-radius: 10px;
   overflow-y: auto;
   font-family: "Raleway", sans-serif;
@@ -90,7 +90,7 @@
 .toDoContent {
   width: 100%;
   height: 90%;
-  background-color: rgb(241, 240, 232);
+  background-color: rgb(223, 211, 195);
   border-radius: 10px;
   overflow-y: auto;
   font-family: "Raleway", sans-serif;
@@ -116,7 +116,7 @@
 .notesContent {
   width: 100%;
   height: 90%;
-  background-color: rgb(241, 240, 232);
+  background-color: rgb(223, 211, 195);
   border-radius: 10px;
   overflow-y: auto;
   font-family: "Raleway", sans-serif;
