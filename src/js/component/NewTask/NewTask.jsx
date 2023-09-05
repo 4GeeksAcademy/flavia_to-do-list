@@ -12,8 +12,7 @@ const NewTask = ({
     <div className="inputsContainer">
       <div className="inputs">
         {/* Comienzo de dropdown */}
-        <div className="mt-3 ms-4">
-          <label htmlFor="opciones">Select an option:</label>
+        <div>
           <select
             id="opciones"
             name="opciones"
@@ -21,7 +20,7 @@ const NewTask = ({
             value={opcionSeleccionada}
             onChange={handleOpcionChange}
           >
-            <option value="empezamos">Let's start</option>
+            <option value="empezamos">Select an option:</option>
             <option value="gratefulFor">Grateful for</option>
             <option value="priorities">Priorities</option>
             <option value="toDoList">To do list</option>

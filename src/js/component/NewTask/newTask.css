@@ -2,20 +2,24 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 10%;
+  margin-top: 5%;
 }
 label {
   font-family: "Raleway", sans-serif;
   font-size: 1vw;
 }
 #opciones {
-  background-color: rgb(223, 211, 195);
+  background-color: rgba(1, 112, 84, 0.747);
   font-family: "Raleway", sans-serif;
   font-size: 1vw;
   border: none;
   padding: 1%;
   border-radius: 10px;
   margin-left: 2%;
+}
+option,
+select {
+  color: rgba(255, 255, 255, 0.726);
 }
 .taskContent {
   border: #333333c0;
@@ -24,21 +28,23 @@ label {
   height: 10vh;
   font-family: "Raleway", sans-serif;
   font-size: 1vw;
+  color: rgba(255, 255, 255, 0.726);
 }
 textarea:disabled {
-  background-color: rgb(205, 194, 174);
+  background-color: rgba(1, 106, 112, 0.438);
 }
 textarea {
-  background-color: rgb(223, 211, 195);
+  background-color: rgba(1, 112, 84, 0.747);
 }
 .submitContainer {
   margin-top: 3%;
 }
 .submitButton {
-  background-color: rgb(204, 156, 117);
+  background-color: rgb(205, 24, 24);
   font-family: "Raleway", sans-serif;
   font-size: 1vw;
+  color: rgba(255, 255, 255, 0.726);
 }
 .submitButton:hover {
-  background-color: rgb(162, 91, 91);
+  background-color: rgba(160, 30, 30, 0.74);
 }

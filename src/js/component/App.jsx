@@ -5,6 +5,7 @@ import "./App.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Slide } from "react-toastify";
+import Header from "./Header";
 
 //create your first component
 export default function App() {
@@ -99,6 +100,7 @@ export default function App() {
   return (
     <div className="bigContainer">
       <div className="littleContainer">
+        <Header />
         <NewTask
           opcionSeleccionada={opcionSeleccionada}
           textoInsertado={textoInsertado}

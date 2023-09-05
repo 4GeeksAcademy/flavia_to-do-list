@@ -4,6 +4,10 @@
   align-items: center;
   width: 100vw;
   background-color: rgb(220, 215, 201);
+  background-image: url("https://wallpapercave.com/wp/wp9081365.png");
+  background-size: 100% 100%; /* Ajustar la imagen al 100% del ancho y alto del div */
+  background-repeat: no-repeat; /* Evitar que la imagen se repita */
+  background-position: center;
 }
 .littleContainer {
   width: 60vw;
@@ -11,5 +15,7 @@
   margin-top: 5%;
   margin-bottom: 5%;
   padding-bottom: 2%;
-  background-color: rgb(208, 184, 168);
+  background-color: rgb(50, 30, 30);
+  border-radius: 20px;
+  color: white;
 }
