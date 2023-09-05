@@ -13,7 +13,7 @@ export default function App() {
             {/* Comienzo de dropdown */}
             <div class="mt-3 ms-4">
               <label for="opciones">Selecciona una opción:</label>
-              <select id="opciones" name="opciones">
+              <select id="opciones" name="opciones" className="pe-3">
                 <option value="opcion1">Grateful for</option>
                 <option value="opcion2">Priorities</option>
                 <option value="opcion3">To do list</option>
@@ -34,7 +34,7 @@ export default function App() {
             <input
               className="submitButton btn ms-3"
               type="submit"
-              value="Submit"
+              value="Agregar"
             ></input>
           </div>
         </div>

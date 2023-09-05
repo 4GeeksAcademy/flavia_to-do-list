@@ -17,7 +17,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 3%;
+  margin-top: 10%;
 }
 .listsContainer {
   height: 80vh;
@@ -53,7 +53,9 @@ textarea {
   border: #333333c0;
   border-radius: 10px;
 }
-
+.submitContainer {
+  margin-top: 3%;
+}
 .submitButton {
   background-color: rgb(238, 224, 201);
   font-family: "Raleway", sans-serif;
