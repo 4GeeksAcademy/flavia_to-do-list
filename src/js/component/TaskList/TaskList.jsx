@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./taskList.css";
 
 const TaskList = ({ gratefulContent, handleDeleteItemClick }) => {
@@ -8,16 +8,20 @@ const TaskList = ({ gratefulContent, handleDeleteItemClick }) => {
         <div className="grateful">
           <div className="gratefulTitle">TODAY, I AM GRATEFUL FOR</div>
           <div className="gratefulContent">
-            {gratefulContent.map((item, index) => (
-              <div key={index}>
-                <li>
+            <ul className="fa-ul">
+              {gratefulContent.map((item, index) => (
+                <li key={index}>
+                  <i className="fa-li fa-solid fa-heart"></i>
                   {item}
-                  <button onClick={() => handleDeleteItemClick(index)}>
-                    X
+                  <button
+                    className="deleteButton"
+                    onClick={() => handleDeleteItemClick(index)}
+                  >
+                    <i className="fa-regular fa-trash-can"></i>
                   </button>
                 </li>
-              </div>
-            ))}
+              ))}
+            </ul>
           </div>
         </div>
         <div className="priorities">

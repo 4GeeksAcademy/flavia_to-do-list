@@ -4,12 +4,10 @@ import "./newTask.css";
 const NewTask = ({
   opcionSeleccionada,
   textoInsertado,
-  clicEnSubmit,
   handleOpcionChange,
   handleInputChange,
   handleButtonClick,
 }) => {
-
   return (
     <div className="inputsContainer">
       <div className="inputs">
@@ -38,6 +36,7 @@ const NewTask = ({
             id="taskContent"
             className="mt-3"
             placeholder="¡Vuélcalo aquí!"
+            maxLength="30"
             value={textoInsertado}
             onChange={handleInputChange}
           />

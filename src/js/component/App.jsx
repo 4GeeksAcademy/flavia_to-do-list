@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import NewTask from "./NewTask";
 import TaskList from "./TaskList";
 import "./App.css";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { Slide } from "react-toastify";
 
 //create your first component
 export default function App() {
@@ -20,14 +23,44 @@ export default function App() {
   };
   console.log(textoInsertado);
 
+  const showToastSuccess = () => {
+    toast.success("Añadido con éxito!", {
+      position: "bottom-right",
+      transition: Slide,
+      hideProgressBar: true,
+      theme: "colored",
+      style: {
+        backgroundColor: "rgb(150, 194, 145)",
+      },
+    });
+  };
+
+  const showToastWarning = () => {
+    toast.warn("No se puede repetir!", {
+      position: "top-center",
+      transition: Slide,
+      hideProgressBar: true,
+      theme: "colored",
+      style: {
+        backgroundColor: "rgb(251, 216, 93)",
+      },
+    });
+  };
+
   const handleButtonClick = () => {
     if (opcionSeleccionada === "gratefulFor" && textoInsertado.length > 0) {
-      // Agregar el textoInsertado al estado de gratefulContent
-      setGratefulContent([...gratefulContent, textoInsertado]);
+      if (textoInsertado === gratefulContent[gratefulContent.length - 1]) {
+        // Muestra una alerta si el texto es igual al previo
+        showToastWarning();
+      } else {
+        // Agregar el textoInsertado al estado de gratefulContent y mostrar toast
+        setGratefulContent([...gratefulContent, textoInsertado]);
+        showToastSuccess();
+      }
     }
+    setTextoInsertado("");
     setClicEnSubmit(!clicEnSubmit);
   };
-  console.log(clicEnSubmit);
 
   const handleDeleteItemClick = (index) => {
     const updatedGratefulContent = [...gratefulContent];
@@ -41,7 +74,6 @@ export default function App() {
         <NewTask
           opcionSeleccionada={opcionSeleccionada}
           textoInsertado={textoInsertado}
-          clicEnSubmit={clicEnSubmit}
           handleOpcionChange={handleOpcionChange}
           handleInputChange={handleInputChange}
           handleButtonClick={handleButtonClick}
@@ -50,6 +82,7 @@ export default function App() {
           gratefulContent={gratefulContent}
           handleDeleteItemClick={handleDeleteItemClick}
         />
+        <ToastContainer />
       </div>
     </div>
   );

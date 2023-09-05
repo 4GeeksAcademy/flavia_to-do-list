@@ -31,7 +31,21 @@
   height: 90%;
   background-color: rgb(241, 240, 232);
   border-radius: 10px;
+  overflow-y: auto;
+  font-family: "Raleway", sans-serif;
+  font-size: 0.85vw;
+  padding-left: 5%;
+  padding-top: 5%;
 }
+.deleteButton {
+  visibility: hidden;
+}
+
+li:hover .deleteButton {
+  visibility: visible;
+  border: none;
+}
+
 .priorities {
   display: block;
   margin-right: 10%;
