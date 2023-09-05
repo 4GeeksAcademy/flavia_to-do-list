@@ -12,6 +12,9 @@ export default function App() {
   const [textoInsertado, setTextoInsertado] = useState(""); //Estado para controlar el texto que se escribe
   const [clicEnSubmit, setClicEnSubmit] = useState(false); // Estado para controlar si el submit ha sido clickeado o no
   const [gratefulContent, setGratefulContent] = useState([]); // Estado para almacenar el contenido de la sección grateful
+  const [prioritiesContent, setPrioritiesContent] = useState([]);
+  const [toDoContent, setToDoContent] = useState([]);
+  const [notesContent, setNotesContent] = useState([]);
 
   const handleOpcionChange = (event) => {
     setOpcionSeleccionada(event.target.value);
@@ -58,14 +61,39 @@ export default function App() {
         showToastSuccess();
       }
     }
+    if (opcionSeleccionada === "priorities" && textoInsertado.length > 0) {
+      if (textoInsertado === prioritiesContent[prioritiesContent.length - 1]) {
+        showToastWarning();
+      } else {
+        setPrioritiesContent([...prioritiesContent, textoInsertado]);
+        showToastSuccess();
+      }
+    }
+    if (opcionSeleccionada === "toDoList" && textoInsertado.length > 0) {
+      if (textoInsertado === toDoContent[toDoContent.length - 1]) {
+        showToastWarning();
+      } else {
+        // Agregar el textoInsertado al estado de gratefulContent y mostrar toast
+        setToDoContent([...toDoContent, textoInsertado]);
+        showToastSuccess();
+      }
+    }
+    if (opcionSeleccionada === "notes" && textoInsertado.length > 0) {
+      if (textoInsertado === notesContent[notesContent.length - 1]) {
+        showToastWarning();
+      } else {
+        // Agregar el textoInsertado al estado de gratefulContent y mostrar toast
+        setNotesContent([...notesContent, textoInsertado]);
+        showToastSuccess();
+      }
+    }
     setTextoInsertado("");
     setClicEnSubmit(!clicEnSubmit);
   };
-
-  const handleDeleteItemClick = (index) => {
-    const updatedGratefulContent = [...gratefulContent];
-    updatedGratefulContent.splice(index, 1);
-    setGratefulContent(updatedGratefulContent);
+  const handleDeleteItemClick = (index, contentState, setContentState) => {
+    const updatedContent = [...contentState];
+    updatedContent.splice(index, 1);
+    setContentState(updatedContent);
   };
 
   return (
@@ -80,6 +108,13 @@ export default function App() {
         />
         <TaskList
           gratefulContent={gratefulContent}
+          setGratefulContent={setGratefulContent}
+          prioritiesContent={prioritiesContent}
+          setPrioritiesContent={setPrioritiesContent}
+          toDoContent={toDoContent}
+          setToDoContent={setToDoContent}
+          notesContent={notesContent}
+          setNotesContent={setNotesContent}
           handleDeleteItemClick={handleDeleteItemClick}
         />
         <ToastContainer />

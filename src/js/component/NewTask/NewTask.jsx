@@ -31,15 +31,23 @@ const NewTask = ({
         {/*Fin de dropdown */}
         {/* Comienzo del input donde escribimos la tarea*/}
         <div>
-          <input
-            type="text"
-            id="taskContent"
-            className="mt-3"
-            placeholder="¡Vuélcalo aquí!"
-            maxLength="30"
+          <textarea
+            className="taskContent mt-3"
+            maxLength={
+              opcionSeleccionada === "gratefulFor"
+                ? 120
+                : opcionSeleccionada === "priorities"
+                ? 20
+                : opcionSeleccionada === "toDoList"
+                ? 120
+                : opcionSeleccionada === "notes"
+                ? 200
+                : null
+            }
             value={textoInsertado}
             onChange={handleInputChange}
-          />
+            disabled={opcionSeleccionada === "empezamos"}
+          ></textarea>
         </div>
         {/* Fin del input donde escribimos la tarea*/}
       </div>
