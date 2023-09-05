@@ -1,37 +1,70 @@
-import React from "react";
+import React, { useState } from "react";
 import "./newTask.css";
 
 const NewTask = () => {
+  const [opcionSeleccionada, setOpcionSeleccionada] = useState("empezamos"); //Estado para controlar la opción que se elige
+  const [textoInsertado, setTextoInsertado] = useState(""); //Estado para controlar el texto que se escribe
+  const [clicEnSubmit, setClicEnSubmit] = useState(false); // Estado para controlar si el submit ha sido clickeado o no
+
+  const handleOpcionChange = (event) => {
+    setOpcionSeleccionada(event.target.value);
+  };
+  console.log(opcionSeleccionada);
+
+  const handleInputChange = (event) => {
+    setTextoInsertado(event.target.value);
+  };
+  console.log(textoInsertado);
+
+  const handleButtonClick = () => {
+    setClicEnSubmit(!clicEnSubmit);
+  };
+  console.log(clicEnSubmit);
+
   return (
     <div className="inputsContainer">
       <div className="inputs">
         {/* Comienzo de dropdown */}
-        <div class="mt-3 ms-4">
-          <label for="opciones">Selecciona una opción:</label>
-          <select id="opciones" name="opciones" className="pe-3">
-            <option value="opcion1">Grateful for</option>
-            <option value="opcion2">Priorities</option>
-            <option value="opcion3">To do list</option>
-            <option value="opcion4">Notes</option>
+        <div className="mt-3 ms-4">
+          <label htmlFor="opciones">Selecciona una opción:</label>
+          <select
+            id="opciones"
+            name="opciones"
+            className="pe-3"
+            value={opcionSeleccionada}
+            onChange={handleOpcionChange}
+          >
+            <option value="empezamos">Empezamos</option>
+            <option value="gratefulFor">Grateful for</option>
+            <option value="priorities">Priorities</option>
+            <option value="toDoList">To do list</option>
+            <option value="notes">Notes</option>
           </select>
         </div>
         {/*Fin de dropdown */}
+        {/* Comienzo del input donde escribimos la tarea*/}
         <div>
-          <textarea
-            rows="2"
-            cols="60"
-            id="textareaContent"
+          <input
+            type="text"
+            id="taskContent"
             className="mt-3"
-          ></textarea>
+            placeholder="¡Vuélcalo aquí!"
+            value={textoInsertado}
+            onChange={handleInputChange}
+          />
         </div>
+        {/* Fin del input donde escribimos la tarea*/}
       </div>
-      <div class="submitContainer">
+      {/* Comienzo del submit*/}
+      <div className="submitContainer">
         <input
           className="submitButton btn ms-3"
           type="submit"
           value="Agregar"
+          onClick={handleButtonClick}
         ></input>
       </div>
+      {/* Fin del submit*/}
     </div>
   );
 };

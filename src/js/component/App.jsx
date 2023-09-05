@@ -5,7 +5,6 @@ import "./App.css";
 
 //create your first component
 export default function App() {
-
   return (
     <div className="bigContainer">
       <div className="littleContainer">
