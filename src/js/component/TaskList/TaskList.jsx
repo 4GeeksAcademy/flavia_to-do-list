@@ -1,13 +1,24 @@
 import React from "react";
 import "./taskList.css";
 
-const TaskList = () => {
+const TaskList = ({ gratefulContent, handleDeleteItemClick }) => {
   return (
     <div className="listsContainer">
       <div className="gratefulAndPriorities">
         <div className="grateful">
           <div className="gratefulTitle">TODAY, I AM GRATEFUL FOR</div>
-          <div className="gratefulContent"></div>
+          <div className="gratefulContent">
+            {gratefulContent.map((item, index) => (
+              <div key={index}>
+                <li>
+                  {item}
+                  <button onClick={() => handleDeleteItemClick(index)}>
+                    X
+                  </button>
+                </li>
+              </div>
+            ))}
+          </div>
         </div>
         <div className="priorities">
           <div className="prioritiesTitle">PRIORITIES</div>

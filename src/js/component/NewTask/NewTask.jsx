@@ -1,25 +1,14 @@
 import React, { useState } from "react";
 import "./newTask.css";
 
-const NewTask = () => {
-  const [opcionSeleccionada, setOpcionSeleccionada] = useState("empezamos"); //Estado para controlar la opción que se elige
-  const [textoInsertado, setTextoInsertado] = useState(""); //Estado para controlar el texto que se escribe
-  const [clicEnSubmit, setClicEnSubmit] = useState(false); // Estado para controlar si el submit ha sido clickeado o no
-
-  const handleOpcionChange = (event) => {
-    setOpcionSeleccionada(event.target.value);
-  };
-  console.log(opcionSeleccionada);
-
-  const handleInputChange = (event) => {
-    setTextoInsertado(event.target.value);
-  };
-  console.log(textoInsertado);
-
-  const handleButtonClick = () => {
-    setClicEnSubmit(!clicEnSubmit);
-  };
-  console.log(clicEnSubmit);
+const NewTask = ({
+  opcionSeleccionada,
+  textoInsertado,
+  clicEnSubmit,
+  handleOpcionChange,
+  handleInputChange,
+  handleButtonClick,
+}) => {
 
   return (
     <div className="inputsContainer">
