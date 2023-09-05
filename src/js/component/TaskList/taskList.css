@@ -1,0 +1,96 @@
+.listsContainer {
+  height: 80vh;
+  margin-top: 10%;
+  margin-left: 5%;
+  margin-right: 5%;
+  border: 1px solid rgb(150, 182, 197);
+}
+.gratefulAndPriorities {
+  display: flex;
+  height: 20%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.grateful {
+  display: block;
+  margin-left: 10%;
+  margin-right: 1%;
+  margin-top: 3%;
+  width: 50%;
+}
+.gratefulTitle {
+  font-family: "Raleway", sans-serif;
+  font-size: 1vw;
+  color: #333333c0;
+  height: 10%;
+  margin-bottom: 5%;
+}
+.gratefulContent {
+  width: 100%;
+  height: 90%;
+  background-color: rgb(241, 240, 232);
+  border-radius: 10px;
+}
+.priorities {
+  display: block;
+  margin-right: 10%;
+  margin-left: 1%;
+  margin-top: 3%;
+  width: 50%;
+}
+.prioritiesTitle {
+  font-family: "Raleway", sans-serif;
+  font-size: 1vw;
+  color: #333333c0;
+  height: 10%;
+  margin-bottom: 5%;
+}
+.prioritiesContent {
+  width: 100%;
+  height: 90%;
+  background-color: rgb(241, 240, 232);
+  border-radius: 10px;
+}
+.toDo {
+  display: block;
+  margin-left: 10%;
+  margin-right: 10%;
+  height: 20%;
+  margin-top: 2%;
+  margin-bottom: 5%;
+}
+.toDoTitle {
+  font-family: "Raleway", sans-serif;
+  font-size: 1vw;
+  color: #333333c0;
+  height: 10%;
+  margin-bottom: 2%;
+}
+.toDoContent {
+  width: 100%;
+  height: 90%;
+  background-color: rgb(241, 240, 232);
+  border-radius: 10px;
+}
+.notes {
+  display: block;
+  margin-left: 10%;
+  margin-right: 10%;
+  height: 20%;
+  margin-top: 2%;
+}
+.notesTitle {
+  font-family: "Raleway", sans-serif;
+  font-size: 1vw;
+  color: #333333c0;
+  height: 10%;
+  margin-bottom: 20px;
+}
+.notesContent {
+  width: 100%;
+  height: 90%;
+  background-color: rgb(241, 240, 232);
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
