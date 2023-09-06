@@ -1,17 +1,12 @@
 .inputsContainer {
   display: flex;
   justify-content: center;
-  align-items: center;
+  flex-direction: row;
   margin-top: 5%;
+  height: 6vh;
 }
-label {
-  font-family: "Raleway", sans-serif;
-  font-size: 1vw;
-}
-.opcionesContainer {
-  width: 8vw;
-}
-#opciones {
+
+select {
   background-color: rgba(17, 108, 110, 0.993);
   font-family: "Raleway", sans-serif;
   border: none;
@@ -26,32 +21,28 @@ select {
 .taskContent {
   border: #333333c0;
   border-radius: 10px;
-  width: 25vw;
-  height: 6vh;
   font-family: "Raleway", sans-serif;
   font-size: 1vw;
   padding-left: 2%;
   color: rgba(255, 255, 255, 0.726);
+  background-color: rgba(17, 108, 110, 0.721);
+  resize: vertical;
+  max-height: 6vh;
+  max-width: 15vw;
+  margin-left: 2vw;
 }
 textarea:disabled {
   background-color: rgba(1, 106, 112, 0.438);
 }
-textarea {
-  background-color: rgba(17, 108, 110, 0.721);
-}
-.submitButtonContainer {
-  width: 6vw;
-}
 .submitButton {
   background-color: rgb(149, 35, 35);
   font-family: "Raleway", sans-serif;
-  font-size: 1vw;
   color: rgba(255, 255, 255, 0.726);
-  padding: 10% 30%;
   height: 6vh;
+  margin-left: 2vw;
 }
 .submitButton:hover {
-  background-color: rgba(17, 108, 110, 0.721);
+  background-color: rgba(149, 35, 35, 0.737);
 }
 
 /* Anchura del scrollbar */

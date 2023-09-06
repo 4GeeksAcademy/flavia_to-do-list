@@ -24,11 +24,9 @@ const NewTask = ({
   return (
     <div className="inputsContainer">
       {/* Comienzo de dropdown */}
-      <div className="opcionesContainer">
+      <div>
         <select
-          id="opciones"
           name="opciones"
-          className="pe-3"
           value={opcionSeleccionada}
           onChange={handleOpcionChange}
         >
@@ -43,7 +41,7 @@ const NewTask = ({
       {/* Comienzo del input donde escribimos la tarea*/}
       <div>
         <textarea
-          className="taskContent mt-1"
+          className="taskContent"
           maxLength={maxLength}
           value={textoInsertado}
           onChange={handleInputChange}
@@ -52,9 +50,9 @@ const NewTask = ({
       </div>
       {/* Fin del input donde escribimos la tarea*/}
       {/* Comienzo del submit*/}
-      <div className="submitButtonContainer">
+      <div>
         <input
-          className="submitButton btn ms-3"
+          className="submitButton btn"
           type="submit"
           value="Add"
           onClick={handleButtonClick}
