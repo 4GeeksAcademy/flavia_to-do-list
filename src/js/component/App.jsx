@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import NewTask from "./NewTask";
 import TaskList from "./TaskList";
 import "./App.css";
@@ -97,30 +97,49 @@ export default function App() {
     setContentState(updatedContent);
   };
 
+  const [isLoading, setIsLoading] = useState(true); // Estado para controlar el estado de la página para mostrar el loader
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, []);
+
   return (
-    <div className="bigContainer">
-      <div className="littleContainer">
-        <Header />
-        <NewTask
-          opcionSeleccionada={opcionSeleccionada}
-          textoInsertado={textoInsertado}
-          handleOpcionChange={handleOpcionChange}
-          handleInputChange={handleInputChange}
-          handleButtonClick={handleButtonClick}
-        />
-        <TaskList
-          gratefulContent={gratefulContent}
-          setGratefulContent={setGratefulContent}
-          prioritiesContent={prioritiesContent}
-          setPrioritiesContent={setPrioritiesContent}
-          toDoContent={toDoContent}
-          setToDoContent={setToDoContent}
-          notesContent={notesContent}
-          setNotesContent={setNotesContent}
-          handleDeleteItemClick={handleDeleteItemClick}
-        />
-        <ToastContainer />
-      </div>
+    <div>
+      {isLoading ? (
+        <div className="loader-container">
+          <div className="loader"></div>
+        </div>
+      ) : (
+        <div className="bigContainer">
+          <div className="littleContainer">
+            <Header />
+            <NewTask
+              opcionSeleccionada={opcionSeleccionada}
+              textoInsertado={textoInsertado}
+              handleOpcionChange={handleOpcionChange}
+              handleInputChange={handleInputChange}
+              handleButtonClick={handleButtonClick}
+            />
+            <TaskList
+              gratefulContent={gratefulContent}
+              setGratefulContent={setGratefulContent}
+              prioritiesContent={prioritiesContent}
+              setPrioritiesContent={setPrioritiesContent}
+              toDoContent={toDoContent}
+              setToDoContent={setToDoContent}
+              notesContent={notesContent}
+              setNotesContent={setNotesContent}
+              handleDeleteItemClick={handleDeleteItemClick}
+            />
+            <ToastContainer />
+          </div>
+        </div>
+      )}
     </div>
   );
 }

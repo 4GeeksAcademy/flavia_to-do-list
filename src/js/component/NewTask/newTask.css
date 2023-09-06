@@ -9,13 +9,13 @@ label {
   font-size: 1vw;
 }
 #opciones {
-  background-color: rgba(1, 112, 84, 0.747);
+  background-color: rgba(17, 108, 110, 0.993);
   font-family: "Raleway", sans-serif;
   font-size: 1vw;
   border: none;
   padding: 1%;
   border-radius: 10px;
-  margin-left: 2%;
+  padding: 10%;
 }
 option,
 select {
@@ -34,19 +34,18 @@ textarea:disabled {
   background-color: rgba(1, 106, 112, 0.438);
 }
 textarea {
-  background-color: rgba(1, 112, 84, 0.747);
+  background-color: rgba(17, 108, 110, 0.721);;
 }
-.submitContainer {
-  margin-top: 3%;
-}
+
 .submitButton {
-  background-color: rgb(205, 24, 24);
+  background-color: rgba(17, 108, 110, 0.993);
   font-family: "Raleway", sans-serif;
   font-size: 1vw;
   color: rgba(255, 255, 255, 0.726);
+  padding: 15%;
 }
 .submitButton:hover {
-  background-color: rgba(160, 30, 30, 0.74);
+  background-color: rgba(17, 108, 110, 0.721);
 }
 
 /* Anchura del scrollbar */
