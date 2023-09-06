@@ -74,3 +74,19 @@ textarea:disabled {
 .taskContent::-webkit-scrollbar-corner {
   display: none;
 }
+
+/*-------------------*/
+/* Estilo para el campo de selección en Chrome */
+select {
+  -webkit-appearance: none; /* Deshabilita la apariencia de formularios nativos */
+  appearance: none;
+  padding: 0.5em 2em 0.5em 0.5em; /* Ajusta el espaciado para que se vea como un cuadro de texto */
+  background-repeat: no-repeat;
+  background-position: calc(100% - 10px) center; /* Posición predeterminada con espacio a la derecha */
+  background-size: 16px; /* Tamaño de la imagen de la flecha */
+}
+
+/* Estilo para la flecha cuando se realiza un hover */
+select:hover {
+  background-image: url("https://cdn-icons-png.flaticon.com/512/626/626013.png"); /* Ruta de la imagen de la flecha */
+}
