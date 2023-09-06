@@ -8,6 +8,19 @@ const NewTask = ({
   handleInputChange,
   handleButtonClick,
 }) => {
+  const limitarCaracteres = () => {
+    const contenido = textoInsertado.trim();
+    const palabras = contenido.split(/\s+/);
+
+    if (palabras.length === 1) {
+      return 15; // Establece el límite en 15 caracteres para una sola palabra
+    } else {
+      return 180; // Establece el límite en 180 caracteres para varias palabras
+    }
+  };
+
+  const maxLength = limitarCaracteres();
+
   return (
     <div className="inputsContainer">
       {/* Comienzo de dropdown */}
@@ -31,17 +44,7 @@ const NewTask = ({
       <div>
         <textarea
           className="taskContent mt-1"
-          maxLength={
-            opcionSeleccionada === "gratefulFor"
-              ? 120
-              : opcionSeleccionada === "priorities"
-              ? 20
-              : opcionSeleccionada === "toDoList"
-              ? 120
-              : opcionSeleccionada === "notes"
-              ? 200
-              : null
-          }
+          maxLength={maxLength}
           value={textoInsertado}
           onChange={handleInputChange}
           disabled={opcionSeleccionada === "empezamos"}

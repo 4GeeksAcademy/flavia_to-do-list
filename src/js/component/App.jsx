@@ -109,7 +109,7 @@ export default function App() {
   }, []);
 
   return (
-    <div>
+    <>
       {isLoading ? (
         <div className="loader-container">
           <div className="loader"></div>
@@ -140,6 +140,6 @@ export default function App() {
           </div>
         </div>
       )}
-    </div>
+    </>
   );
 }
