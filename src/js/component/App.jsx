@@ -28,7 +28,7 @@ export default function App() {
   console.log(textoInsertado);
 
   const showToastSuccess = () => {
-    toast.success("Añadido con éxito!", {
+    toast.success("Successfully added!", {
       position: "bottom-right",
       transition: Slide,
       hideProgressBar: true,
@@ -40,7 +40,7 @@ export default function App() {
   };
 
   const showToastWarning = () => {
-    toast.warn("No se puede repetir!", {
+    toast.warn("You cannot repeat!", {
       position: "top-center",
       transition: Slide,
       hideProgressBar: true,

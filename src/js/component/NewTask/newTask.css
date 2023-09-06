@@ -8,14 +8,16 @@ label {
   font-family: "Raleway", sans-serif;
   font-size: 1vw;
 }
+.opcionesContainer {
+  width: 8vw;
+}
 #opciones {
   background-color: rgba(17, 108, 110, 0.993);
   font-family: "Raleway", sans-serif;
-  font-size: 1vw;
   border: none;
   padding: 1%;
   border-radius: 10px;
-  padding: 10%;
+  height: 6vh;
 }
 option,
 select {
@@ -25,24 +27,28 @@ select {
   border: #333333c0;
   border-radius: 10px;
   width: 25vw;
-  height: 10vh;
+  height: 6vh;
   font-family: "Raleway", sans-serif;
   font-size: 1vw;
+  padding-left: 2%;
   color: rgba(255, 255, 255, 0.726);
 }
 textarea:disabled {
   background-color: rgba(1, 106, 112, 0.438);
 }
 textarea {
-  background-color: rgba(17, 108, 110, 0.721);;
+  background-color: rgba(17, 108, 110, 0.721);
 }
-
+.submitButtonContainer {
+  width: 6vw;
+}
 .submitButton {
-  background-color: rgba(17, 108, 110, 0.993);
+  background-color: rgb(149, 35, 35);
   font-family: "Raleway", sans-serif;
   font-size: 1vw;
   color: rgba(255, 255, 255, 0.726);
-  padding: 15%;
+  padding: 10% 30%;
+  height: 6vh;
 }
 .submitButton:hover {
   background-color: rgba(17, 108, 110, 0.721);
