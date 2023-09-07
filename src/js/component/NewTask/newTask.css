@@ -16,7 +16,14 @@ select {
   color: rgba(255, 255, 255, 0.726);
   font-size: 15px;
 }
-
+@media (min-width: 1300px) and (min-height: 900px) {
+  select {
+    font-size: 2em; /* Ajusta el tamaño según tus necesidades */
+  }
+  .submitButton {
+    font-size: 2em;
+  }
+}
 .taskContent {
   border: #333333c0;
   border-radius: 10px;
