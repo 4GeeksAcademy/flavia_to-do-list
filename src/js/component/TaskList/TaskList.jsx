@@ -8,6 +8,7 @@ const TaskList = ({
   setPrioritiesContent,
   toDoContent,
   setToDoContent,
+  numbersOfItems,
   notesContent,
   setNotesContent,
   handleDeleteItemClick,
@@ -66,6 +67,7 @@ const TaskList = ({
       <div className="toDo">
         <div className="toDoTitle">TO DO LIST</div>
         <div className="toDoContent">
+        <span className="toDoTitle">Number of tasks: {numbersOfItems}</span>
           <ul className="fa-ul">
             {toDoContent.map((item, index) => (
               <li className="text" key={index}>

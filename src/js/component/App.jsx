@@ -16,12 +16,24 @@ export default function App() {
   const [prioritiesContent, setPrioritiesContent] = useState([]);
   const [toDoContent, setToDoContent] = useState([]);
   const [notesContent, setNotesContent] = useState([]);
+  const [isLoading, setIsLoading] = useState(true); // Estado para controlar el estado de la página para mostrar el loader
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
 
+    return () => {
+      clearTimeout(timer);
+    };
+  }, []);
+
+  //Función para controlar la opción elegida
   const handleOpcionChange = (event) => {
     setOpcionSeleccionada(event.target.value);
   };
   console.log(opcionSeleccionada);
 
+  //Función para controlar el input insertado en textarea
   const handleInputChange = (event) => {
     setTextoInsertado(event.target.value);
   };
@@ -50,6 +62,26 @@ export default function App() {
       },
     });
   };
+
+  const showToastError = () => {
+    toast.warn("You have reached the maximum number of tasks!", {
+      position: "top-left",
+      transition: Slide,
+      hideProgressBar: true,
+      theme: "colored",
+      style: {
+        backgroundColor: "rgb(154, 59, 59)",
+      },
+    });
+  };
+
+  useEffect(() => {
+    // Limitar el número de elementos a 5
+    if (toDoContent.length > 5) {
+      showToastError();
+      setToDoContent((prevContent) => prevContent.slice(0, 5));
+    }
+  }, [toDoContent]);
 
   const handleButtonClick = () => {
     if (opcionSeleccionada === "gratefulFor" && textoInsertado.length > 0) {
@@ -97,17 +129,6 @@ export default function App() {
     setContentState(updatedContent);
   };
 
-  const [isLoading, setIsLoading] = useState(true); // Estado para controlar el estado de la página para mostrar el loader
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 3000);
-
-    return () => {
-      clearTimeout(timer);
-    };
-  }, []);
-
   return (
     <>
       {isLoading ? (
@@ -135,6 +156,7 @@ export default function App() {
               notesContent={notesContent}
               setNotesContent={setNotesContent}
               handleDeleteItemClick={handleDeleteItemClick}
+              numbersOfItems={toDoContent.length}
             />
             <ToastContainer />
           </div>

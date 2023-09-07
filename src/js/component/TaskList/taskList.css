@@ -104,6 +104,11 @@
   padding-top: 1%;
   word-wrap: break-word;
 }
+span {
+  display: flex;
+  justify-content: end;
+  margin-right: 2vw;
+}
 .notes {
   display: block;
   margin-left: 10%;

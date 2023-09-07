@@ -8,6 +8,7 @@ const NewTask = ({
   handleInputChange,
   handleButtonClick,
 }) => {
+  //Función para limitar los caracteres en el textarea diferenciando si se inserta una palabra o una frase.
   const limitarCaracteres = () => {
     const contenido = textoInsertado.trim();
     const palabras = contenido.split(/\s+/);
@@ -19,8 +20,6 @@ const NewTask = ({
     }
   };
 
-  const maxLength = limitarCaracteres();
-
   return (
     <div className="inputsContainer">
       {/* Comienzo de dropdown */}
@@ -30,7 +29,7 @@ const NewTask = ({
           value={opcionSeleccionada}
           onChange={handleOpcionChange}
         >
-          <option value="empezamos">Select an option:</option>
+          <option value="empezamos">Select an option</option>
           <option value="gratefulFor">Grateful for</option>
           <option value="priorities">Priorities</option>
           <option value="toDoList">To do list</option>
@@ -42,7 +41,7 @@ const NewTask = ({
       <div>
         <textarea
           className="taskContent"
-          maxLength={maxLength}
+          maxLength={limitarCaracteres()}
           value={textoInsertado}
           onChange={handleInputChange}
           disabled={opcionSeleccionada === "empezamos"}

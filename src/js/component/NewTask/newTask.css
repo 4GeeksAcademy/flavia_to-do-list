@@ -13,11 +13,10 @@ select {
   padding: 1%;
   border-radius: 10px;
   height: 6vh;
-}
-option,
-select {
   color: rgba(255, 255, 255, 0.726);
+  font-size: 15px;
 }
+
 .taskContent {
   border: #333333c0;
   border-radius: 10px;
